@@ -1,7 +1,7 @@
 # Docker's command 👩🏽‍🔧
- - **docker -v**: version de docker\
- - **loggin**: docker login (create id on website Docker Hub)\
- - **open  docker's terminal**: docker exec -it id_container /bin/bash\
+ - **docker -v**: version de docker
+ - **loggin**: docker login (create id on website Docker Hub)
+ - **open  docker's terminal**: docker exec -it id_container /bin/bash
 
  ## Images
  - **list images**: docker imag**e** ls **ou** docker image**s** 
