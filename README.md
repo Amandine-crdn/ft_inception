@@ -11,9 +11,9 @@
  - **create a volune**: docker volume create my-vol\
  - **list volumes**: docker volume ls\
  - **inspect a volume**: docker volume inspect my-vol\
- - **remove a volune**:
- - docker volume rm my-vol\
- - if you have any problems: rm [xxxx] + docker volume rm my-vol\
+ - **remove a volume**:
+    - docker volume rm my-vol\
+    - if you have any problems: rm [xxxx] + docker volume rm my-vol\
 
  ## Container
  **start a container with a volume**: docker run -d \
