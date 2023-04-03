@@ -1,9 +1,10 @@
-#
+version: "3.7"
+#version: '3'
 
-#version: "3.7"
-#services:
+services:
 
-  #nginx:
+  nginx:
+    image: requirements/nginx
 
 #  mariadb:
  #   image: mysql:5.7

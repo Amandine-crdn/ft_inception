@@ -1,4 +1,9 @@
-# Inception
+# Docker's command
+ **loggin**: docker login (create id on website Docker Hub)\
+ **open  docker's terminal**: docker exec -it id_container /bin/bash\
+
+---
+
 # First example
 
 ## 1. create vm with oracle & create files and directorys
@@ -36,10 +41,7 @@ sudo docker kill id_container  **(Fermer le container)**
 - docker ps
 - doker kill id_container
 
+
 ---
 
-
-# Docker's command
- **loggin**: docker login (create id on website Docker Hub)\
- **open  docker's terminal**: docker exec -it id_container /bin/bash\
 
