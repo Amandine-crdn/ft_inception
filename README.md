@@ -1,4 +1,5 @@
 # Inception
+# First example
 
 ## 1. create vm with oracle & create files and directorys
 ## 2. install docker
@@ -23,8 +24,8 @@ sudo docker-compose --version
 - sudo docker build . -t inception/nginx **(se placer dans le dossier nginx)**\
 sudo docker run inception/nginx
 docker ps **(check id du container)**\
-docker run -d -p 80:80 nginx
-# connect to internet
+docker run -d -p 80:80 nginx\
+**connect to internet**
 
 
 ## Fermer le container
