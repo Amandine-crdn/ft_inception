@@ -1,4 +1,6 @@
 # Docker's command 👩🏽‍🔧
+
+ - **docker info**: toutes les infos de docker
  - **docker -v**: version de docker
  - **loggin**: docker login (create id on website Docker Hub)
  - **open  docker's terminal**: docker exec -it id_container /bin/bash
@@ -68,6 +70,22 @@ sudo docker kill id_container  **(Fermer le container)**
 
 ---
 
+# Using official Image Nginx Docker 🎢
+- docker pull nginx
+- docker run -d --name server -p 80:80 nginx
+- docker ps
+- doker kill id_container
+
+
+---
+
+# .env
+
+- configurer nom de domaine: DOMAIN_NAME=[login].42.fr
+
+
+---
+
 # DEFINITION ❤️
 
 Le **Docker Engine** est un outil client-serveur sur lequel repose la technologie de container pour prendre en charge les tâches de création d'applications basées container. Le moteur crée un processus daemon server-side permettant d'héberger les images, les containers, les réseaux et les volumes de stockage.
@@ -76,13 +94,16 @@ Les **Daemon** servent en général à répondre à des requêtes du réseau, à
 
 **Host**: équipement accueillant des applications logiciel, le fichier *hosts* est utilisé par le système lors d'une connexion à Internet
 
----
+**Les bases de données** ont pour but de stocker, organiser et analyser les données. Elles sont stockées sous forme de fichiers ou d’ensembles de fichiers.
 
-# Using official Image Nginx Docker 🎢
-- docker pull nginx
-- docker run -d --name server -p 80:80 nginx
-- docker ps
-- doker kill id_container
+**Le port 80** *http://localhost:80* => acces http
+**Le port 443** *http://localhost:443* => acces https (SSL)
+avec TLS => (HTTPS) socket.
+
+**TSL** (*Transport Layer Security*)\
+ou
+**SSL** (*Secure Sockets Layer*)\
+https://fr.wikipedia.org/wiki/Transport_Layer_Security#Principe_de_fonctionnement_dans_les_navigateurs_web
 
 
 ---
