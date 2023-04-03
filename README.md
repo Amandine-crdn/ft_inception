@@ -29,8 +29,6 @@ docker run -d -p 80:80 nginx\
 sudo docker kill <id>  **(Fermer le container)**
 
 ---
-***
-___
 
 # docker's command
  ## loggin
