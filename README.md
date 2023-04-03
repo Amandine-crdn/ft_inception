@@ -26,10 +26,7 @@ sudo docker run inception/nginx
 docker ps **(check id du container)**\
 docker run -d -p 80:80 nginx\
 **connect to internet**
-
-
-## Fermer le container
-sudo docker kill <id>
+sudo docker kill <id>  **(Fermer le container)**\
 
 
 # docker's command
