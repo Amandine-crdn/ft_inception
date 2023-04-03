@@ -25,7 +25,7 @@
 
 ---
 
-# First example 🚗
+# First example 🛷🌬
 
 ## 1. create vm with oracle & create files and directorys
 ## 2. install docker
@@ -56,7 +56,7 @@ sudo docker kill id_container  **(Fermer le container)**
 
 ---
 
-# Using official Image Nginx Docker
+# Using official Image Nginx Docker 🎢
 - docker pull nginx
 - docker run -d --name server -p 80:80 nginx
 - docker ps
