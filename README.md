@@ -23,6 +23,17 @@
  - **list all containers (off/on)**: docker ps -a **ou** docker container ls
  - **delete conteneur**: docker rm ID **ou** docker rm [first 3 characters ID]
 
+ ## Network
+  **docker network [CMD]**
+  - **connect [network] [id_container/name]**:     Connect a container to a network
+  - **create [network]**:      Create a network
+  - **disconnect [network] [id_container/name]**:  Disconnect a container from a network
+  - **inspect [network]**:     Display detailed information on one or more networks
+  - **ls**:          List networks
+  - **prune**:       Remove all unused networks
+  - **rm**:          Remove one or more networks
+
+
 ---
 
 # First example 🛷🌬
@@ -53,6 +64,17 @@ docker ps **(check id du container)**\
 docker run -d -p 80:80 nginx\
 **connect to internet** \
 sudo docker kill id_container  **(Fermer le container)**
+
+
+---
+
+# DEFINITION ❤️
+
+Le **Docker Engine** est un outil client-serveur sur lequel repose la technologie de container pour prendre en charge les tâches de création d'applications basées container. Le moteur crée un processus daemon server-side permettant d'héberger les images, les containers, les réseaux et les volumes de stockage.
+
+Les **Daemon** servent en général à répondre à des requêtes du réseau, à l'activité du matériel ou à d'autres programmes en exécutant certaines tâches.
+
+**Host**: équipement accueillant des applications logiciel, le fichier *hosts* est utilisé par le système lors d'une connexion à Internet
 
 ---
 
