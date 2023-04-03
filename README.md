@@ -1,4 +1,4 @@
-# Docker's command
+# Docker's command 👩🏽‍🔧
  - **docker -v**: version de docker\
  - **loggin**: docker login (create id on website Docker Hub)\
  - **open  docker's terminal**: docker exec -it id_container /bin/bash\
@@ -25,7 +25,7 @@
 
 ---
 
-# First example
+# First example 🚗
 
 ## 1. create vm with oracle & create files and directorys
 ## 2. install docker
