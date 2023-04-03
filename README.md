@@ -4,24 +4,24 @@
  - **open  docker's terminal**: docker exec -it id_container /bin/bash\
 
  ## Images
- - **list images**: docker imag**e** ls **ou** docker image**s** \
+ - **list images**: docker imag**e** ls **ou** docker image**s** 
  - **delete image**: docker image rm IMAGE_ID
  
  ## Volumes
- - **create a volune**: docker volume create my-vol\
- - **list volumes**: docker volume ls\
- - **inspect a volume**: docker volume inspect my-vol\
+ - **create a volume**: docker volume create my-vol
+ - **list volumes**: docker volume ls
+ - **inspect a volume**: docker volume inspect my-vol
  - **remove a volume**:
-    - docker volume rm my-vol\
-    - if you have any problems: rm [xxxx] + docker volume rm my-vol\
+    - docker volume rm my-vol
+    - if you have any problems: rm [xxxx] + docker volume rm my-vol
 
  ## Container
  - **start a container with a volume**: docker run -d \
   --name devtest \
   -v my-vol:/app \
   nginx:latest \
- - **list all containers (off/on)**: docker ps -a **ou** docker container ls\
- - **delete conteneur**: docker rm ID **ou** docker rm [first 3 characters ID]\
+ - **list all containers (off/on)**: docker ps -a **ou** docker container ls
+ - **delete conteneur**: docker rm ID **ou** docker rm [first 3 characters ID]
 
 ---
 
