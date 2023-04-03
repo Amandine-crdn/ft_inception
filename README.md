@@ -16,12 +16,12 @@
     - if you have any problems: rm [xxxx] + docker volume rm my-vol\
 
  ## Container
- **start a container with a volume**: docker run -d \
+ - **start a container with a volume**: docker run -d \
   --name devtest \
   -v my-vol:/app \
   nginx:latest \
- **list all containers (off/on)**: docker ps -a **ou** docker container ls\
- **delete conteneur**: docker rm ID **ou** docker rm [first 3 characters ID]\
+ - **list all containers (off/on)**: docker ps -a **ou** docker container ls\
+ - **delete conteneur**: docker rm ID **ou** docker rm [first 3 characters ID]\
 
 ---
 
