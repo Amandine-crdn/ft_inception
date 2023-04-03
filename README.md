@@ -32,10 +32,9 @@ docker run -d -p 80:80 nginx\
 sudo docker kill <id>
 
 
-
-## Docker
- # se connecter
+# docker's command
+ ## loggin
  docker login (create id on website Docker Hub)
- # Ouvrir un terminal docker
+ ## open  docker's terminal
  docker exec -it <id> /bin/bash
 
