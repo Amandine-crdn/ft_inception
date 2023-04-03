@@ -1,0 +1,28 @@
+#
+
+#version: "3.7"
+#services:
+
+  #nginx:
+
+#  mariadb:
+ #   image: mysql:5.7
+ #   restart: always
+ #   environment:
+ #     MYSQL_ROOT_PASSWORD: myrootpass
+ #     MYSQL_DATABASE: mydatabase
+ #     MYSQL_USER: myuser
+ #     MYSQL_PASSWORD: myuserpass
+#
+#
+#
+ # wordpress:
+ #   image: wordpress:latest
+ #   restart: always
+ #   environment:
+ #     WORDPRESS_DB_HOST: mysql
+ #     WORDPRESS_DB_USER: myuser
+ #     WORDPRESS_DB_NAME: mydatabase
+ #     WORDPRESS_DB_PASSWORD: myuserpass
+#
+  #
