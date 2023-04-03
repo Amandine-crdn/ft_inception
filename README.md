@@ -40,8 +40,6 @@ sudo docker kill id_container  **(Fermer le container)**
 
 
 # Docker's command
- ## loggin
- docker login (create id on website Docker Hub)
- ## open  docker's terminal
- docker exec -it id_container /bin/bash
+ **loggin**: docker login (create id on website Docker Hub)\
+ **open  docker's terminal**: docker exec -it id_container /bin/bash\
 
