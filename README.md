@@ -16,7 +16,7 @@ https://docs.docker.com/engine/reference/commandline/docker/
 # text in gray```
 
  ### Images
- - **list images**: docker imag**e** ls **ou** docker image**s** 
+ - **list images**: ```docker imag**e** ls``` **ou** ```docker image**s**``` 
  - **delete image**: docker image rm IMAGE_ID
  ### Volumes 
  - **create a volume**: docker volume create my-vol
