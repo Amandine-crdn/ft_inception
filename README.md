@@ -7,22 +7,22 @@ https://docs.docker.com/engine/reference/commandline/docker/
  - **open  docker's terminal**: docker exec -it id_container /bin/bash => effectuer nos propres tests
 
  ### Images
- - **list images**: ```docker imag**e** ls``` **ou** ```docker image**s**``` 
- - **delete image**: docker image rm IMAGE_ID
+ - **list images**: ```docker image ls``` **ou** ```docker images``` 
+ - **delete image**: ```docker image rm [image_id]```
  ### Volumes 
- - **create a volume**: docker volume create my-vol
- - **list volumes**: docker volume ls
- - **inspect a volume**: docker volume inspect my-vol
+ - **create a volume**: ```docker volume create my-vol```
+ - **list volumes**: ```docker volume ls```
+ - **inspect a volume**: ```docker volume inspect my-vol```
  - **remove a volume**:
-    - docker volume rm my-vol
-    - if you have any problems: rm [xxxx] + docker volume rm my-vol
+    - ```docker volume rm my-vol```
+    - if you have any problems: ```rm [xxxx] + docker volume rm my-vol```
  ### Container
- - **build a container**: docker build -t [container_name] .
- - **start a container with a volume**: docker run -d \
+ - **build a container**: ```docker build -t [container_name] .```
+ - **start a container with a volume**: ```docker run -d \
   --name devtest \
   -v my-vol:/app \
-  nginx:latest \
- - **list all containers (stopped && running)**: docker ps -a **ou** docker container ls \
+  nginx:latest \ ```
+ - **list all containers (stopped && running)**: ```docker ps -a``` **ou** ```docker container ls``` \
  - **delete conteneur**: docker rm ID **ou** docker rm [first 3 characters ID] **ou**
  - **delete all conteneur**: docker rm $(docker ps -a -q)
  ### Network
