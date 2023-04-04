@@ -18,22 +18,16 @@ https://docs.docker.com/engine/reference/commandline/docker/
     - if you have any problems: ```rm [xxxx] + docker volume rm my-vol```
  ### Container
  - **build a container**: ```docker build -t [container_name] .```
- - **start a container with a volume**: ```docker run -d \
-  --name devtest \
-  -v my-vol:/app \
-  nginx:latest \ ```
+ - **start a container with a volume**: ```docker run -d \ --name devtest \ -v my-vol:/app \ nginx:latest \ ```
  - **list all containers (stopped && running)**: ```docker ps -a``` **ou** ```docker container ls``` \
- - **delete conteneur**: docker rm ID **ou** docker rm [first 3 characters ID] **ou**
- - **delete all conteneur**: docker rm $(docker ps -a -q)
+ - **delete conteneur**: ```docker rm [id]``` **ou** ```docker rm [first 3 characters id]```
+ - **delete all conteneur**: ```docker rm $(docker ps -a -q)```
  ### Network
   **docker network [CMD]**
-  - **connect [network] [id_container/name]**:     Connect a container to a network
-  - **create [network]**:      Create a network
-  - **disconnect [network] [id_container/name]**:  Disconnect a container from a network
-  - **inspect [network]**:     Display detailed information on one or more networks
-  - **ls**:          List networks
-  - **prune**:       Remove all unused networks
-  - **rm**:          Remove one or more networks
+  - **Connect a container to a network**:    ```connect [network] [id_container/name]```
+  - **Create a network**: ```create [network]```     
+  - **Disconnect a container from a network**: ```disconnect [network] [id_container/name]``` 
+  - **Display detailed information on one or more networks**: ```inspect [network]```
 
 ---
 
@@ -41,39 +35,38 @@ https://docs.docker.com/engine/reference/commandline/docker/
 
 ## 1. create a virtual machine (here Debian) with Oracle/VirtualBox & create files and folders
 ## 2. install docker
-sudo apt-get remove containerd.io\
-sudo apt install docker.io docker-compose -y\
-systemctl start docker\
-sudo gpasswd -a $USER docker
+```sudo apt-get remove containerd.io```\
+```sudo apt install docker.io docker-compose -y```\
+```systemctl start docker```\
+```sudo gpasswd -a $USER docker```
 #### if you have some problems
-sudo systemctl daemon-reload\
-sudo systemctl restart docker
+```sudo systemctl daemon-reload``` \
+```sudo systemctl restart docker```
 #### check your process running
-sudo docker ps **(process running)**
+```sudo docker ps *```
 
 ## 3. install docker compose
-sudo curl -SL https://github.com/docker/compose/releases/download/v2.12.2/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose\
-sudo chmod +x /usr/local/bin/docker-compose
-/check
-sudo docker-compose --version
+```sudo curl -SL https://github.com/docker/compose/releases/download/v2.12.2/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose``` \
+```sudo chmod +x /usr/local/bin/docker-compose``` \
+*to check*: ```sudo docker-compose --version```
 
 ## 4. simple nginx creation example  
 - Create Dockerfile (FROM debian:buster)
-- sudo docker build . -t [container_name] *de preference pour le sujet* **ou** sudo docker build .  :**(you must be in the nginx folder)**\
-- sudo docker run inception/nginx
-docker ps **(check container's id)**\
-docker run -d -p 80:80 nginx\
+- ```sudo docker build . -t [container_name]``` *de preference pour le sujet* **ou** ```sudo docker build .```  :**(you must be in the nginx folder)**\
+- ```sudo docker run inception/nginx```
+```docker ps``` **(check container's id)**\
+```docker run -d -p 80:80 nginx``` \
 **connect to internet** \
-sudo docker kill id_container  **(Close the container)**
+```sudo docker kill id_container```  **(Close the container)**
 
 
 ---
 
 # Using official Image Nginx Docker 🎢
-- docker pull nginx
-- docker run -d --name server -p 80:80 nginx
-- docker ps
-- doker kill id_container
+- ```docker pull nginx```
+- ```docker run -d --name server -p 80:80 nginx```
+- ```docker ps```
+- ```doker kill id_container```
 
 
 ---
@@ -107,7 +100,6 @@ avec TLS => (HTTPS) socket.
 
 # Step
 
-docker build -t [container_name] . \
-docker image ls \
-**Démarrer une image  + acceder au terminal du container:** docker run -it [image_name]\
-docker ps -a : containers stopped
+```docker build -t [container_name] . ```\
+```docker image ls ```\
+**Démarrer une image  + acceder au terminal du container:** ```docker run -it [image_name]```\
