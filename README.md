@@ -7,8 +7,9 @@ go to [Official Website Docker](https://docs.docker.com/engine/reference/command
 
  ### [Images]
 
- - **list images** ```docker image ls```ou ```docker images``` 
- - **delete image** ```docker image rm [image_id]```
+ - **list images** ```docker image ls```
+ - **delete image** ```docker rmi [image_id]```
+
  ### [Volumes]
  - **create a volume** ```docker volume create my-vol```
  - **list volumes** ```docker volume ls```
@@ -100,11 +101,21 @@ avec TLS => (HTTPS) socket.
 
 # Step by step to build a container
 
+## Create a Dockerfile
+-> With *FROM *Initial Setup *debian:buster*
+-> With *RUN* Installing Nginx to avoid reinstallation each time a new container terminal is launched, add -y to allow choice "yes"
+   add utils \
+   download the main tool for managing/creating the SSL certificate \ 
+   create folder to allow stock the certificat and the key for sécurisate connexion.
+
+
+
+
 ```docker build -t [container_name] . ```\
 ```docker image ls ```\
 **Démarrer une image** ```docker run -i --name [container_name] [image_name]```\
-*in an other window* **Acceder au terminal du container** ```docker exec -it [id_container] /bin/bash``` ou ```docker exec -it [contaienr_name] /bin/bash``` \
+*in an other window* **Acceder au terminal du container** ```docker exec -it [id_container] /bin/bash``` ou ```docker exec -it [container_name] /bin/bash``` \
 **leave terminal's container** ```exit``` \
 **stop running image** Ctrl + C
-```apt upgrade```
-```apt install nginx```
+
+TIPS: Ctrl Droit + F to allow full screen VM
