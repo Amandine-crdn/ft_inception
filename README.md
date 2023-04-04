@@ -1,9 +1,10 @@
 # Docker's command 👩🏽‍🔧
 
- - **docker info**: toutes les infos de docker
- - **docker -v**: version de docker
+https://docs.docker.com/engine/reference/commandline/docker/
+
+
  - **loggin**: docker login (create id on website Docker Hub)
- - **open  docker's terminal**: docker exec -it id_container /bin/bash
+ - **open  docker's terminal**: docker exec -it id_container /bin/bash => effectuer nos propres tests
 
  ## Images
  - **list images**: docker imag**e** ls **ou** docker image**s** 
@@ -18,12 +19,14 @@
     - if you have any problems: rm [xxxx] + docker volume rm my-vol
 
  ## Container
+ - **build a container**: docker build -t [container_name] .
  - **start a container with a volume**: docker run -d \
   --name devtest \
   -v my-vol:/app \
   nginx:latest \
- - **list all containers (off/on)**: docker ps -a **ou** docker container ls
- - **delete conteneur**: docker rm ID **ou** docker rm [first 3 characters ID]
+ - **list all containers (stopped && running)**: docker ps -a **ou** docker container ls \
+ - **delete conteneur**: docker rm ID **ou** docker rm [first 3 characters ID] **ou**
+ - **delete all conteneur**: docker rm $(docker ps -a -q)
 
  ## Network
   **docker network [CMD]**
@@ -34,7 +37,6 @@
   - **ls**:          List networks
   - **prune**:       Remove all unused networks
   - **rm**:          Remove one or more networks
-
 
 ---
 
@@ -59,9 +61,9 @@ sudo chmod +x /usr/local/bin/docker-compose
 sudo docker-compose --version
 
 ## 4. simple nginx creation example  
-- Create Dockerfile
-- sudo docker build . -t inception/nginx **(go to the nginx folder)**\
-sudo docker run inception/nginx
+- Create Dockerfile (FROM debian:buster)
+- sudo docker build . -t [container_name] *de preference pour le sujet* **ou** sudo docker build .  :**(you must be in the nginx folder)**\
+- sudo docker run inception/nginx
 docker ps **(check container's id)**\
 docker run -d -p 80:80 nginx\
 **connect to internet** \
@@ -100,12 +102,15 @@ Les **Daemon** servent en général à répondre à des requêtes du réseau, à
 **Le port 443** *http://localhost:443* => acces https (SSL)
 avec TLS => (HTTPS) socket.
 
-**TSL** (*Transport Layer Security*)\
-ou
-**SSL** (*Secure Sockets Layer*)\
-https://fr.wikipedia.org/wiki/Transport_Layer_Security#Principe_de_fonctionnement_dans_les_navigateurs_web
+**TSL** (*Transport Layer Security*) remplce le **SSL** (*Secure Sockets Layer*), corrige vulnerabilite d'ancien protocole
 
 
 ---
 
 
+# Step
+
+docker build -t [container_name] . \
+docker image ls \
+**Démarrer une image  + acceder au terminal du container:** docker run -it [image_name]\
+docker ps -a : containers stopped
