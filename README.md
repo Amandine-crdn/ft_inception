@@ -7,7 +7,7 @@ go to [Official Website Docker](https://docs.docker.com/engine/reference/command
 
  ### [Images]
 
- - **list images**: ```docker image ls``` **ou** ```docker images``` 
+ - **list images**: ```docker image ls```ou ```docker images``` 
  - **delete image**: ```docker image rm [image_id]```
  ### [Volumes]
  - **create a volume**: ```docker volume create my-vol```
@@ -18,9 +18,9 @@ go to [Official Website Docker](https://docs.docker.com/engine/reference/command
     - if you have any problems: ```rm [xxxx] + docker volume rm my-vol```
  ### [Container]
  - **build a container**: ```docker build -t [container_name] .```
- - **start a container with a volume**: ```docker run -d \ --name devtest \ -v my-vol:/app \ nginx:latest \ ```
- - **list all containers (stopped && running)**: ```docker ps -a``` **ou** ```docker container ls``` \
- - **delete conteneur**: ```docker rm [id]``` **ou** ```docker rm [first 3 characters id]```
+ - **start a container with a volume**: ```docker run -d && --name devtest && -v my-vol:/app && nginx:latest```
+ - **list all containers (stopped && running)**: ```docker ps -a``` ou ```docker container ls``` 
+ - **delete conteneur**: ```docker rm [id]``` ou ```docker rm [first 3 characters id]```
  - **delete all conteneur**: ```docker rm $(docker ps -a -q)```
  ### [Network]
   **docker network [CMD]**
@@ -51,13 +51,13 @@ go to [Official Website Docker](https://docs.docker.com/engine/reference/command
 *to check*: ```sudo docker-compose --version```
 
 ## 4. simple nginx creation example  
-- Create Dockerfile (FROM debian:buster)
-- ```sudo docker build . -t [container_name]``` *de preference pour le sujet* **ou** ```sudo docker build .```  **(you must be in the nginx folder)**
+- **Create Dockerfile** (FROM debian:buster)
+- ```sudo docker build . -t [container_name]``` *de preference pour le sujet* **ou** ```sudo docker build .```  **you must be in the nginx folder**
 - ```sudo docker run -i --name [container_name] [image_name]``` \ *--name [container_name]* is not mandatory cause you will use docker-compose after in your eextension file .yml
-- **(check container's id)**: ```docker ps```
+- **Check container's id**: ```docker ps```
 - ```docker run -d -p 80:80 nginx```
-**connect to internet** \
-- **(Close the container)**: ```sudo docker kill id_container```
+**Connect to internet** \
+- **Close the container**: ```sudo docker kill id_container```
 
 
 ---
