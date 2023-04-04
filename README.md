@@ -118,4 +118,8 @@ avec TLS => (HTTPS) socket.
 **leave terminal's container** ```exit``` \
 **stop running image** Ctrl + C
 
-TIPS: Ctrl Droit + F to allow full screen VM
+docker run -p80:80 -i --rm --name container_name image_name
+
+TIPS:
+- Ctrl Droit + F to allow full screen VM
+- ```curl localhost``` => afficher page http
