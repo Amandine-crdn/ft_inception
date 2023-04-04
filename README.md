@@ -6,23 +6,23 @@ go to [Official Website Docker](https://docs.docker.com/engine/reference/command
  - **open  docker's terminal**: docker exec -it id_container /bin/bash => effectuer nos propres tests
 
  ### [Images]
- 
+
  - **list images**: ```docker image ls``` **ou** ```docker images``` 
  - **delete image**: ```docker image rm [image_id]```
- ### Volumes 
+ ### [Volumes]
  - **create a volume**: ```docker volume create my-vol```
  - **list volumes**: ```docker volume ls```
  - **inspect a volume**: ```docker volume inspect my-vol```
  - **remove a volume**:
     - ```docker volume rm my-vol```
     - if you have any problems: ```rm [xxxx] + docker volume rm my-vol```
- ### Container
+ ### [Container]
  - **build a container**: ```docker build -t [container_name] .```
  - **start a container with a volume**: ```docker run -d \ --name devtest \ -v my-vol:/app \ nginx:latest \ ```
  - **list all containers (stopped && running)**: ```docker ps -a``` **ou** ```docker container ls``` \
  - **delete conteneur**: ```docker rm [id]``` **ou** ```docker rm [first 3 characters id]```
  - **delete all conteneur**: ```docker rm $(docker ps -a -q)```
- ### Network
+ ### [Network]
   **docker network [CMD]**
   - **Connect a container to a network**:    ```connect [network] [id_container/name]```
   - **Create a network**: ```create [network]```     
@@ -45,7 +45,7 @@ go to [Official Website Docker](https://docs.docker.com/engine/reference/command
 #### check your process running
 ```sudo docker ps *```
 
-## 3. install docker compose
+## 3. install docker compose (__to delete maybe__)
 ```sudo curl -SL https://github.com/docker/compose/releases/download/v2.12.2/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose``` \
 ```sudo chmod +x /usr/local/bin/docker-compose``` \
 *to check*: ```sudo docker-compose --version```
@@ -53,11 +53,11 @@ go to [Official Website Docker](https://docs.docker.com/engine/reference/command
 ## 4. simple nginx creation example  
 - Create Dockerfile (FROM debian:buster)
 - ```sudo docker build . -t [container_name]``` *de preference pour le sujet* **ou** ```sudo docker build .```  :**(you must be in the nginx folder)**\
-- ```sudo docker run inception/nginx```
-```docker ps``` **(check container's id)**\
-```docker run -d -p 80:80 nginx``` \
+- ```sudo docker run -i --name [container_name] [image_name]``` *--name [container_name]* is not mandatory cause you will use docker-compose after in your eextension file .yml
+- **(check container's id)**: ```docker ps```  \
+- ```docker run -d -p 80:80 nginx``` \
 **connect to internet** \
-```sudo docker kill id_container```  **(Close the container)**
+- **(Close the container)**: ```sudo docker kill id_container```  \
 
 
 ---

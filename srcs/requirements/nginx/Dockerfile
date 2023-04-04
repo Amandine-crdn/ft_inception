@@ -10,4 +10,5 @@ COPY conf/nginx.conf /etc/nginx/conf
 EXPOSE 80/tcp
 #Running Nginx
 CMD ["/usr/sbin/nginx", "-g", "daemon off;"]
+# ENTRYPOINT [ "bash" ]
 #what is deamon off ?
