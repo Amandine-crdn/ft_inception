@@ -40,7 +40,7 @@
 
 # First example 🛷🌬
 
-## 1. create vm with oracle & create files and directorys
+## 1. create a virtual machine (here Debian) with Oracle/VirtualBox & create files and folders
 ## 2. install docker
 sudo apt-get remove containerd.io\
 sudo apt install docker.io docker-compose -y\
@@ -58,14 +58,14 @@ sudo chmod +x /usr/local/bin/docker-compose
 /check
 sudo docker-compose --version
 
-## 4. simple exemple creation nginx
+## 4. simple nginx creation example  
 - Create Dockerfile
-- sudo docker build . -t inception/nginx **(se placer dans le dossier nginx)**\
+- sudo docker build . -t inception/nginx **(go to the nginx folder)**\
 sudo docker run inception/nginx
-docker ps **(check id du container)**\
+docker ps **(check container's id)**\
 docker run -d -p 80:80 nginx\
 **connect to internet** \
-sudo docker kill id_container  **(Fermer le container)**
+sudo docker kill id_container  **(Close the container)**
 
 
 ---
