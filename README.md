@@ -6,6 +6,12 @@ https://docs.docker.com/engine/reference/commandline/docker/
  - **loggin**: docker login (create id on website Docker Hub)
  - **open  docker's terminal**: docker exec -it id_container /bin/bash => effectuer nos propres tests
 
+```diff
+- text in red
++ text in green
+! text in orange
+# text in gray
+```
  ### Images
  - **list images**: docker imag**e** ls **ou** docker image**s** 
  - **delete image**: docker image rm IMAGE_ID
