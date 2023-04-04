@@ -2,32 +2,32 @@
 go to [Official Website Docker](https://docs.docker.com/engine/reference/commandline/docker/)
 
 
- - **loggin**: docker login (create id on website Docker Hub)
- - **open  docker's terminal**: docker exec -it id_container /bin/bash => effectuer nos propres tests
+ - **loggin** docker login (create id on website Docker Hub)
+ - **open  docker's terminal** docker exec -it id_container /bin/bash => effectuer nos propres tests
 
  ### [Images]
 
- - **list images**: ```docker image ls```ou ```docker images``` 
- - **delete image**: ```docker image rm [image_id]```
+ - **list images** ```docker image ls```ou ```docker images``` 
+ - **delete image** ```docker image rm [image_id]```
  ### [Volumes]
- - **create a volume**: ```docker volume create my-vol```
- - **list volumes**: ```docker volume ls```
- - **inspect a volume**: ```docker volume inspect my-vol```
- - **remove a volume**:
+ - **create a volume** ```docker volume create my-vol```
+ - **list volumes** ```docker volume ls```
+ - **inspect a volume** ```docker volume inspect my-vol```
+ - **remove a volume**
     - ```docker volume rm my-vol```
-    - if you have any problems: ```rm [xxxx] + docker volume rm my-vol```
+    - if you have any problems ```rm [xxxx] + docker volume rm my-vol```
  ### [Container]
- - **build a container**: ```docker build -t [container_name] .```
- - **start a container with a volume**: ```docker run -d && --name devtest && -v my-vol:/app && nginx:latest```
- - **list all containers (stopped && running)**: ```docker ps -a``` ou ```docker container ls``` 
- - **delete conteneur**: ```docker rm [id]``` ou ```docker rm [first 3 characters id]```
- - **delete all conteneur**: ```docker rm $(docker ps -a -q)```
+ - **build a container** ```docker build -t [container_name] .```
+ - **start a container with a volume** ```docker run -d && --name devtest && -v my-vol/app && nginxlatest```
+ - **list all containers (stopped && running)** ```docker ps -a``` ou ```docker container ls``` 
+ - **delete conteneur** ```docker rm [id]``` ou ```docker rm [first 3 characters id]```
+ - **delete all conteneur** ```docker rm $(docker ps -a -q)```
  ### [Network]
   **docker network [CMD]**
-  - **Connect a container to a network**:    ```connect [network] [id_container/name]```
-  - **Create a network**: ```create [network]```     
-  - **Disconnect a container from a network**: ```disconnect [network] [id_container/name]``` 
-  - **Display detailed information on one or more networks**: ```inspect [network]```
+  - **Connect a container to a network**    ```connect [network] [id_container/name]```
+  - **Create a network** ```create [network]```     
+  - **Disconnect a container from a network** ```disconnect [network] [id_container/name]``` 
+  - **Display detailed information on one or more networks** ```inspect [network]```
 
 ---
 
@@ -54,10 +54,10 @@ go to [Official Website Docker](https://docs.docker.com/engine/reference/command
 - **Create Dockerfile** (FROM debian:buster)
 - ```sudo docker build . -t [container_name]``` *de preference pour le sujet* **ou** ```sudo docker build .```  **you must be in the nginx folder**
 - ```sudo docker run -i --name [container_name] [image_name]``` \ *--name [container_name]* is not mandatory cause you will use docker-compose after in your eextension file .yml
-- **Check container's id**: ```docker ps```
+- **Check container's id** ```docker ps```
 - ```docker run -d -p 80:80 nginx```
 **Connect to internet** \
-- **Close the container**: ```sudo docker kill id_container```
+- **Close the container** ```sudo docker kill id_container```
 
 
 ---
@@ -92,14 +92,19 @@ Les **Daemon** servent en général à répondre à des requêtes du réseau, à
 **Le port 443** *http://localhost:443* => acces https (SSL)
 avec TLS => (HTTPS) socket.
 
-**TSL** (*Transport Layer Security*) remplce le **SSL** (*Secure Sockets Layer*), corrige vulnerabilite d'ancien protocole
+**TSL** (*Transport Layer Security*) remplace le **SSL** (*Secure Sockets Layer*), corrige vulnerabilite d'ancien protocole
 
 
 ---
 
 
-# Step
+# Step by step to build a container
 
 ```docker build -t [container_name] . ```\
 ```docker image ls ```\
-**Démarrer une image  + acceder au terminal du container:** ```docker run -it [image_name]```\
+**Démarrer une image** ```docker run -i --name [container_name] [image_name]```\
+*in an other window* **Acceder au terminal du container** ```docker exec -it [id_container] /bin/bash``` ou ```docker exec -it [contaienr_name] /bin/bash``` \
+**leave terminal's container** ```exit``` \
+**stop running image** Ctrl + C
+```apt upgrade```
+```apt install nginx```

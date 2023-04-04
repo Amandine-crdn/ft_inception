@@ -1,6 +1,6 @@
 #Initial Setup
 FROM  debian:buster
-#Installing Nginx
+#Installing Nginx here avoids reinstallation each time a new container terminal is launched
 RUN apt-get -y update && apt-get -y install nginx
 #Configuration File
 COPY conf/nginx.conf /etc/nginx/conf
