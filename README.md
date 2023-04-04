@@ -6,11 +6,11 @@ https://docs.docker.com/engine/reference/commandline/docker/
  - **loggin**: docker login (create id on website Docker Hub)
  - **open  docker's terminal**: docker exec -it id_container /bin/bash => effectuer nos propres tests
 
- ## Images
+ ### Images
  - **list images**: docker imag**e** ls **ou** docker image**s** 
  - **delete image**: docker image rm IMAGE_ID
  
- ## Volumes
+ ### Volumes 
  - **create a volume**: docker volume create my-vol
  - **list volumes**: docker volume ls
  - **inspect a volume**: docker volume inspect my-vol
@@ -18,7 +18,7 @@ https://docs.docker.com/engine/reference/commandline/docker/
     - docker volume rm my-vol
     - if you have any problems: rm [xxxx] + docker volume rm my-vol
 
- ## Container
+ ### Container
  - **build a container**: docker build -t [container_name] .
  - **start a container with a volume**: docker run -d \
   --name devtest \
