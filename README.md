@@ -9,7 +9,6 @@ https://docs.docker.com/engine/reference/commandline/docker/
  ### Images
  - **list images**: docker imag**e** ls **ou** docker image**s** 
  - **delete image**: docker image rm IMAGE_ID
- 
  ### Volumes 
  - **create a volume**: docker volume create my-vol
  - **list volumes**: docker volume ls
@@ -17,7 +16,6 @@ https://docs.docker.com/engine/reference/commandline/docker/
  - **remove a volume**:
     - docker volume rm my-vol
     - if you have any problems: rm [xxxx] + docker volume rm my-vol
-
  ### Container
  - **build a container**: docker build -t [container_name] .
  - **start a container with a volume**: docker run -d \
@@ -27,8 +25,7 @@ https://docs.docker.com/engine/reference/commandline/docker/
  - **list all containers (stopped && running)**: docker ps -a **ou** docker container ls \
  - **delete conteneur**: docker rm ID **ou** docker rm [first 3 characters ID] **ou**
  - **delete all conteneur**: docker rm $(docker ps -a -q)
-
- ## Network
+ ### Network
   **docker network [CMD]**
   - **connect [network] [id_container/name]**:     Connect a container to a network
   - **create [network]**:      Create a network
