@@ -3,7 +3,7 @@ go to [Official Website Docker](https://docs.docker.com/engine/reference/command
 
 
  - **loggin** docker login (create id on website Docker Hub)
- - **open  docker's terminal** docker exec -it id_container /bin/bash => effectuer nos propres tests
+ - **open  docker's terminal** ```docker exec -it id_container /bin/bash``` => effectuer nos propres tests
 
  ### [Images]
 
@@ -53,8 +53,8 @@ go to [Official Website Docker](https://docs.docker.com/engine/reference/command
 
 ## 4. simple nginx creation example  
 - **Create Dockerfile** (FROM debian:buster)
-- ```sudo docker build . -t [container_name]``` *de preference pour le sujet* **ou** ```sudo docker build .```  **you must be in the nginx folder**
-- ```sudo docker run -i --name [container_name] [image_name]``` \ *--name [container_name]* is not mandatory cause you will use docker-compose after in your eextension file .yml
+- ```sudo docker build . -t [image_name]``` *de preference pour le sujet* **ou** ```sudo docker build .```  **you must be in the nginx folder**
+- ```sudo docker run -p80:80 -i --name [container_name] [image_name]``` \ *--name [container_name]* is not mandatory cause you will use docker-compose after in your eextension file .yml
 - **Check container's id** ```docker ps```
 - ```docker run -d -p 80:80 nginx```
 **Connect to internet** \
