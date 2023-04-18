@@ -6,9 +6,16 @@ go to [Official Website Docker](https://docs.docker.com/engine/reference/command
  - **open  docker's terminal** ```docker exec -it id_container /bin/bash``` => effectuer nos propres tests
 
  ### [Images]
-
  - **list images** ```docker image ls```
  - **delete image** ```docker rmi [image_id]```
+ - **delete ALL images** ```docker system prune -a```
+
+ ### [Container]
+ - **build a container** ```docker build -t [container_name] .```
+ - **start a container with a volume** ```docker run -d && --name devtest && -v my-vol/app && nginxlatest```
+ - **list all containers (stopped && running)** ```docker ps -a``` ou ```docker container ls``` 
+ - **delete conteneur** ```docker rm [id]``` ou ```docker rm [first 3 characters id]```
+ - **delete all conteneur** ```docker rm $(docker ps -a -q)```
 
  ### [Volumes]
  - **create a volume** ```docker volume create my-vol```
@@ -17,12 +24,7 @@ go to [Official Website Docker](https://docs.docker.com/engine/reference/command
  - **remove a volume**
     - ```docker volume rm my-vol```
     - if you have any problems ```rm [xxxx] + docker volume rm my-vol```
- ### [Container]
- - **build a container** ```docker build -t [container_name] .```
- - **start a container with a volume** ```docker run -d && --name devtest && -v my-vol/app && nginxlatest```
- - **list all containers (stopped && running)** ```docker ps -a``` ou ```docker container ls``` 
- - **delete conteneur** ```docker rm [id]``` ou ```docker rm [first 3 characters id]```
- - **delete all conteneur** ```docker rm $(docker ps -a -q)```
+
  ### [Network]
   **docker network [CMD]**
   - **Connect a container to a network**    ```connect [network] [id_container/name]```
@@ -54,7 +56,7 @@ go to [Official Website Docker](https://docs.docker.com/engine/reference/command
 ## 4. simple nginx creation example  
 - **Create Dockerfile** (FROM debian:buster)
 - ```sudo docker build . -t [image_name]``` *de preference pour le sujet* **ou** ```sudo docker build .```  **you must be in the nginx folder**
-- ```sudo docker run -p80:80 -i --name [container_name] [image_name]``` \ *--name [container_name]* is not mandatory cause you will use docker-compose after in your eextension file .yml
+- ```sudo docker run -p80:80 -i --name [container_name] [image_name]``` *--name [container_name]* is not mandatory cause you will use docker-compose after in your eextension file .yml
 - **Check container's id** ```docker ps```
 - ```docker run -d -p 80:80 nginx```
 **Connect to internet** \
@@ -111,15 +113,17 @@ avec TLS => (HTTPS) socket.
 
 
 
-```docker build -t [container_name] . ```\
+
+
+```docker build -t [image_name] . ```\
 ```docker image ls ```\
-**Démarrer une image** ```docker run -i --name [container_name] [image_name]```\
+**Démarrer une image** ```docker run -p80:80 -i --name [container_name] [image_name]```\
 *in an other window* **Acceder au terminal du container** ```docker exec -it [id_container] /bin/bash``` ou ```docker exec -it [container_name] /bin/bash``` \
 **leave terminal's container** ```exit``` \
 **stop running image** Ctrl + C
 
-docker run -p80:80 -i --rm --name container_name image_name
 
 TIPS:
 - Ctrl Droit + F to allow full screen VM
 - ```curl localhost``` => afficher page http
+- checker si pour ouvert ```nmap 127.0.0.1 -p 443```
