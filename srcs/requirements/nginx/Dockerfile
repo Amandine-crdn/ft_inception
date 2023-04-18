@@ -17,6 +17,12 @@ RUN openssl req -x509 -nodes -out /etc/nginx/ssl/inception.crt -keyout /etc/ngin
 #stocker fichiers de config NGINX
 RUN mkdir -p /var/run/nginx
 
+#root
+RUN chmod 755 /var/www/html
+
+#user
+RUN chown -R www-data:www-data /var/www/html
+
 #Configuration File
 #install packages utile
 #  COPY conf/nginx.conf /etc/nginx/nginx.conf
@@ -27,7 +33,7 @@ COPY ./conf/nginx.conf /etc/nginx/conf.d
 
 
 #Exposing Ports
-EXPOSE 80/tcp
+EXPOSE 443/tcp
 #EXPOSE 443/tcp
 #Running Nginx
 CMD ["/usr/sbin/nginx", "-g", "daemon off;"]
