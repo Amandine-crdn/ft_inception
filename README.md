@@ -127,3 +127,11 @@ TIPS:
 - Ctrl Droit + F to allow full screen VM
 - ```curl localhost``` => afficher page http
 - checker si pour ouvert ```nmap 127.0.0.1 -p 443```
+
+## Add root privileges to user to allow connection to login.42.fr
+visudo => ajouter les droits superutilisateurs au user
+
+## Rendre le nom de domaine accessible en local
+/etc/hosts 
+
+
