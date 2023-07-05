@@ -12,15 +12,39 @@
 - **clone your repository**
 - open the subject
 
-# Install docker compose //https://docs.docker.com/compose/install/linux/#install-the-plugin-manually
+# Install docker compose *https://docs.docker.com/compose/install/linux/#install-the-plugin-manually*
 
 - ``` sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose```
 - ```sudo chmod +x /usr/local/bin/docker-compose```
 - ```sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose```
 - **to check** ```docker-compose -v```
+- **install docker command** ```sudo apt install docker```
+- ```sudo snap refresh```
+- ```sudo snap install docker ```
+
+# Create your first container NGINX *https://aws.plainenglish.io/how-to-create-custom-nginx-docker-image-cd02242a2478* 
+- create Dockerfile
+the default path html page : /usr/share/nginx/html
+  
+- ```sudo docker build -t image_name .```
+- **to check** ```sudo docker image ls```
+-```sudo docker run -d --name container_name -p 8080:80 nginximage```
+- **to check** ```sudo docker ps -a```
+- **to check** ```xdg-open http://localhost:8080```
+- **delete container** ```sudo docker rm -f container_name```
+- **delete image** ```sudo docker rmi -f image_name``` ou ```docker system prune -a```
+
+*https://towardsaws.com/how-to-create-custom-nginx-docker-image-94c6bd4be29*
+- **open terminal to know path for the html**```sudo docker exec -it container_name /bin/bash```
+- **open terminal to know path for the conf file**
 
 
-# Create your first container NGINX
+
+
+
+
+
+
 
 
 
