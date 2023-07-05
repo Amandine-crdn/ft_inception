@@ -1,3 +1,32 @@
+# Install your virtual machine
+
+- **download your image and create VM on VirtualBox**
+- ```sudo apt-get update```
+- ```sudo apt install vim``` and if you need the IDE of your choice (VSCode for exemple)
+- ```sudo apt-get install git```
+- ```sudo apt-get install build-essential```
+- ```apt-get install curl -y```
+# Create new ssh key on your intra
+- ```ssh-keygen```
+- ```cat ~/.ssh/id_rsa.pub```
+- **clone your repository**
+- open the subject
+
+# Install docker compose //https://docs.docker.com/compose/install/linux/#install-the-plugin-manually
+
+- ``` sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose```
+- ```sudo chmod +x /usr/local/bin/docker-compose```
+- ```sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose```
+- **to check** ```docker-compose -v```
+
+
+# Create your first container NGINX
+
+
+
+
+
+
 # Docker's command 👩🏽‍🔧
 go to [Official Website Docker](https://docs.docker.com/engine/reference/commandline/docker/)
 
