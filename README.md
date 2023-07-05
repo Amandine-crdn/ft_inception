@@ -1,45 +1,53 @@
 # Install your virtual machine
-
-- **download your image and create VM on VirtualBox**
-- ```sudo apt-get update```
-- ```sudo apt install vim``` and if you need the IDE of your choice (VSCode for exemple)
-- ```sudo apt-get install git```
-- ```sudo apt-get install build-essential```
-- ```apt-get install curl -y```
-# Create new ssh key on your intra
-- ```ssh-keygen```
-- ```cat ~/.ssh/id_rsa.pub```
-- **clone your repository**
-- open the subject
-
-# Install docker compose *https://docs.docker.com/compose/install/linux/#install-the-plugin-manually*
-
-- ``` sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose```
-- ```sudo chmod +x /usr/local/bin/docker-compose```
-- ```sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose```
-- **to check** ```docker-compose -v```
-- **install docker command** ```sudo apt install docker```
-- ```sudo snap refresh```
-- ```sudo snap install docker ```
-
-# Create your first container NGINX *https://aws.plainenglish.io/how-to-create-custom-nginx-docker-image-cd02242a2478* 
-- create Dockerfile
-the default path html page : /usr/share/nginx/html
+- download your image and create VM on VirtualBox
+  ```sudo apt-get update```
+  ```sudo apt install vim``` and if you need the IDE of your choice (VSCode for exemple)
+  ```sudo apt-get install git```
+  ```sudo apt-get install build-essential```
+  ```apt-get install curl -y```
   
-- ```sudo docker build -t image_name .```
-- **to check** ```sudo docker image ls```
--```sudo docker run -d --name container_name -p 8080:80 nginximage```
-- **to check** ```sudo docker ps -a```
-- **to check** ```xdg-open http://localhost:8080```
-- **delete container** ```sudo docker rm -f container_name```
-- **delete image** ```sudo docker rmi -f image_name``` ou ```docker system prune -a```
+# Create new ssh key on your intra
+  ```ssh-keygen```
+  ```cat ~/.ssh/id_rsa.pub```
+  clone your repository and open the subject
 
-*https://towardsaws.com/how-to-create-custom-nginx-docker-image-94c6bd4be29*
-- **open terminal to know path for the html**```sudo docker exec -it container_name /bin/bash```
-- **open terminal to know path for the conf file**
+# Install docker compose
+*https://docs.docker.com/compose/install/linux/#install-the-plugin-manually*
+``` sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose```
+```sudo chmod +x /usr/local/bin/docker-compose```
+```sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose```
+**to check** ```docker-compose -v```
+**install docker command** ```sudo apt install docker```
+```sudo snap refresh```
+```sudo snap install docker ```
 
+---
 
+# Create your first container NGINX
 
+## create Dockerfile
+*https://aws.plainenglish.io/how-to-create-custom-nginx-docker-image-cd02242a2478* 
+  ```sudo docker build -t image_name .``` **to check** ```sudo docker image ls```
+  ```sudo docker run -d --name container_name -p 8080:80 nginximage``` **to check** ```sudo docker ps -a```
+  **to check** ```xdg-open http://localhost:8080```
+  **delete container** ```sudo docker rm -f container_name```
+  **delete image** ```sudo docker rmi -f image_name``` ou ```docker system prune -a```
+
+## ssl
+*https://docs.docker.com/engine/security/certificates/*
+- in the Dockerfile
+  ```openssl genrsa -out client.key 4096```
+  ```openssl req -new -x509 -text -key client.key -out client.cert```
+- create nginx.conf
+to know the correct path to write line copy in the Dockerfile, search the location of conf file in the terminal of the container
+```sudo docker exec -it container_name /bin/bash```
+  
+**don't forget to copy your configure file in the correct path /etc/nginx/sites-enabled/nginx.conf**
+
+---
+
+# Create Wordpress container
+*https://www.massolit-media.com/tech-writing/wordpress-and-docker-dockerfiles/*
 
 
 
