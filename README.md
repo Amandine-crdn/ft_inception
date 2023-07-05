@@ -47,11 +47,11 @@ to know the correct path to write line copy in the Dockerfile, search the locati
 ---
 
 # Create Wordpress container
-*https://www.massolit-media.com/tech-writing/wordpress-and-docker-dockerfiles/*
+## create docker-compose.yml
+*https://openclassrooms.com/fr/courses/2035766-optimisez-votre-deploiement-en-creant-des-conteneurs-avec-docker/6211677-creez-un-fichier-docker-compose-pour-orchestrer-vos-conteneurs*
 
 
-
-
+https://devops.tutorials24x7.com/blog/containerize-wordpress-with-nginx-php-mysql-and-phpmyadmin-using-docker-containers
 
 
 
