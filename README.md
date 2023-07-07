@@ -44,15 +44,26 @@ to know the correct path to write line copy in the Dockerfile, search the locati
   
 **don't forget to copy your configure file in the correct path /etc/nginx/sites-enabled/nginx.conf**
 
+
+
 ---
 
 # Create Wordpress container
 
 ## create dockerfile
 *https://www.massolit-media.com/tech-writing/wordpress-and-docker-dockerfiles/*
-**http://localhost:8080/** should be show you the main page of the site WP
+## installing the necessary software
+
+## configure PHP sous debian buster
+*https://www.geek17.com/fr/content/debian-10-buster-installer-et-configurer-la-derniere-version-de-nginx-et-php-73-fpm-105*
+*https://www.digitalocean.com/community/tutorials/php-fpm-nginx*
+
+*https://webhostinggeeks.com/howto/how-to-run-wordpress-on-nginx-php-fpm-and-mysql/*
+in php.ini: ```cgi.fix_pathinfo=0```
 
 
+cli
+*https://developer.wordpress.org/cli/commands/config/create/*
 
 
 
@@ -63,16 +74,26 @@ to know the correct path to write line copy in the Dockerfile, search the locati
 **regex**
 
 https://devops.tutorials24x7.com/blog/containerize-wordpress-with-nginx-php-mysql-and-phpmyadmin-using-docker-containers
+**http://localhost:8080/** should be show you the main page of the site WP
 
 
+on my terminal I write ```sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:ondrej/php
+sudo apt-get update
+sudo apt-get install php7.3``` to allow php find package then I can install php-fpm ``````
 
 
-
+```/etc/php/7.3/fpm/```
+**php.ini** *https://webhostinggeeks.com/howto/how-to-run-wordpress-on-nginx-php-fpm-and-mysql/*
+**www.config** *https://www.digitalocean.com/community/tutorials/php-fpm-nginx*
+we must show to Nginx how use php => modify config
+*https://codingwithmanny.medium.com/custom-wordpress-docker-setup-8851e98e6b8*
+*https://www.digitalocean.com/community/tutorials/php-fpm-nginx*
 
 
 # Docker's command 👩🏽‍🔧
 go to [Official Website Docker](https://docs.docker.com/engine/reference/commandline/docker/)
-
+https://docs.docker.com/engine/reference/builder/
 
  - **loggin** docker login (create id on website Docker Hub)
  - **open  docker's terminal** ```docker exec -it id_container /bin/bash``` => effectuer nos propres tests
