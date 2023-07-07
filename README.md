@@ -64,7 +64,7 @@ in php.ini: ```cgi.fix_pathinfo=0```
 
 cli
 *https://developer.wordpress.org/cli/commands/config/create/*
-
+to check in containers'terminal : ```wp --info``` *https://wp-cli.org/fr/*
 
 
 
