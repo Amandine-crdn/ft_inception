@@ -66,22 +66,13 @@ cli
 *https://developer.wordpress.org/cli/commands/config/create/*
 to check in containers'terminal : ```wp --info``` *https://wp-cli.org/fr/*
 
-
-
-## create docker-compose.yml 
-*https://openclassrooms.com/fr/courses/2035766-optimisez-votre-deploiement-en-creant-des-conteneurs-avec-docker/6211677-creez-un-fichier-docker-compose-pour-orchestrer-vos-conteneurs*
-
-**regex**
-
 https://devops.tutorials24x7.com/blog/containerize-wordpress-with-nginx-php-mysql-and-phpmyadmin-using-docker-containers
 **http://localhost:8080/** should be show you the main page of the site WP
-
 
 on my terminal I write ```sudo apt-get install software-properties-common
 sudo add-apt-repository ppa:ondrej/php
 sudo apt-get update
 sudo apt-get install php7.3``` to allow php find package then I can install php-fpm ``````
-
 
 ```/etc/php/7.3/fpm/```
 **php.ini** *https://webhostinggeeks.com/howto/how-to-run-wordpress-on-nginx-php-fpm-and-mysql/*
@@ -89,6 +80,20 @@ sudo apt-get install php7.3``` to allow php find package then I can install php-
 we must show to Nginx how use php => modify config
 *https://codingwithmanny.medium.com/custom-wordpress-docker-setup-8851e98e6b8*
 *https://www.digitalocean.com/community/tutorials/php-fpm-nginx*
+# set the wp-config-sample.php
+*https://developer.wordpress.org/cli/commands/config/create/*
+
+
+## create mariadb
+*https://mariadb.com/kb/en/configuring-mariadb-with-option-files/*
+*https://tuto.grademe.fr/inception/#mariadb*
+
+## create docker-compose.yml 
+*https://openclassrooms.com/fr/courses/2035766-optimisez-votre-deploiement-en-creant-des-conteneurs-avec-docker/6211677-creez-un-fichier-docker-compose-pour-orchestrer-vos-conteneurs*
+
+**regex**
+
+
 
 
 # Docker's command 👩🏽‍🔧
